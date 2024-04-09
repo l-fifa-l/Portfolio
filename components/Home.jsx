@@ -13,7 +13,7 @@ export default function Home() {
                 alt=""
               />
               <p className="text-3xl my-3 text-center dark:text-white">
-                Hi, I&#x27;m Vivek 🤘
+                Hi, I&#x27;m Madhu 🤘
               </p>
               <h2 className="max-w-3xl text-3xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
                 Building digital products,brands,and experiences.
