@@ -32,8 +32,11 @@ function Experience() {
               {exp.company}
             </Link>
           </div>
-
-          <div className="dark:text-slate-200 text-slate-700">{exp.desc}</div>
+          <div className="dark:text-slate-200 text-slate-700">
+      {exp.description.map((desc, index) => (
+        <p key={index}>{desc}</p>
+      ))}
+    </div>
         </div>
       ))}
     </div>

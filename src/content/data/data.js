@@ -19,7 +19,7 @@ const userData = {
       `I believe in the power of collaboration and the ability to bring ideas to life through collaboration.`,
     ],
     currentProject: "@Google",
-    currentProjectUrl: "www.google.com",
+    currentProjectUrl: "https://www.google.com",
   },
   resumeUrl:
     "https://drive.google.com/file/d/1YTJHbtHuwhAtaDAnLly7leeo5H3hkIkr/view?usp=sharing",
