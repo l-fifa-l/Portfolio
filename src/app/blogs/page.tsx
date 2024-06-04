@@ -1,7 +1,7 @@
 import { Categories } from "@components/categories";
 import { Pagination } from "@components/pagination";
 import { Posts } from "@components/posts";
-import { getPaginatedPosts, postsPerPage } from "../../posts";
+import { getPaginatedPosts, postsPerPage } from "../../blogs";
 import PageWrap from "@components/PageWrap";
 
 export default async function Home() {
@@ -11,7 +11,8 @@ export default async function Home() {
   });
 
   return (
-<>
+    <>
+      <Categories />
       <Posts posts={posts} />
 
       <Pagination
@@ -20,7 +21,6 @@ export default async function Home() {
         perPage={postsPerPage}
         total={total}
       />
-      <Categories/>
-      </>
+    </>
   );
 }

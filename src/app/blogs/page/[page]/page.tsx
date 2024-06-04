@@ -1,6 +1,6 @@
 import { Pagination } from "@components/pagination";
 import { Posts } from "@components/posts";
-import { getPaginatedPosts, getPosts, postsPerPage } from "../../../../posts";
+import { getPaginatedPosts, getPosts, postsPerPage } from "../../../../blogs";
 import { notFound, redirect } from "next/navigation";
 
 export default async function Page({ params }: { params: { page: number } }) {

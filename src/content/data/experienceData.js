@@ -1,13 +1,13 @@
 const experience =[
   {
-    "title": "Project Management",
+    "title": "Project Management (Current)",
     "company": "Google",
     "year": "2024",
     "companyLink": "https://www.google.com/",
     "description": [
       "Responsible for making products at Google better.",
-      "Worked on enhancing product features and user experience.",
-      "Collaborated with cross-functional teams to ensure project success."
+      "Working on enhancing product features and user experience.",
+      "Collaborating with cross-functional teams to ensure project success."
     ]
   },
   {

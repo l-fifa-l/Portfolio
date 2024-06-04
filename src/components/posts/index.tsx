@@ -1,28 +1,38 @@
-import { type Post } from "../../posts";
+import { type Post } from "../../blogs";
 import Link from "next/link";
 
 export function Posts({ posts }: { posts: Post[] }) {
   return (
     <ol className="space-y-4">
-    {posts.map(({ slug, title, publishDate, categories }) => (
-      <li
-        key={slug}
-        className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
-      >
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-          <Link href={`/blogs/${slug}`}>{title}</Link>
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300">
-          <strong>Published:</strong> {new Date(publishDate).toLocaleDateString()} <strong>Categories:</strong>{" "}
+    {posts.map(({ slug, title,image, publishDate, categories }) => (
+      <>
+      <li key={slug} className="bg-white">
+      <Link href={`/blogs/${slug}`}>
+      <article className="mx-auto flex max-w-md flex-col rounded-2xl bg-white px-4 shadow md:max-w-5xl md:flex-row md:items-center">
+        <div className="shrink-0 my-4 md:mr-8 md:max-w-sm">
+          <img className="rounded-2xl" src={image} alt="" />
+        </div>
+        <div className="py-4 sm:py-8">
+          <a href="#" className="mb-6 block text-2xl font-medium text-gray-700">{title}</a>
+          <p className="mb-6 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit illum consequatur quia doloremque! Similique eius enim nostrum totam.</p>
+          <div className="flex items-center">
+            <p className="ml-4 w-56">
+              <strong>Published:</strong> {new Date(publishDate).toLocaleDateString()} <strong>Categories:</strong>{" "}
           {categories.map((cat, i) => (
             <span key={cat}>
               {i ? ", " : ""}
               {cat}
             </span>
           ))}
-        </p>
-      </li>
+            </p>
+          </div>
+        </div>
+      </article>
+      </Link>
+    </li>
+      </>
     ))}
   </ol>
   );
 }
+

@@ -4,7 +4,7 @@ import { Posts } from "@components/posts";
 import {
   getPaginatedPostsByCategory,
   postsPerPage,
-} from "../../../../posts";
+} from "../../../../blogs";
 import { notFound } from "next/navigation";
 
 export default async function Category({
